@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import UserTable from './tables/UserTable';
 
-const () => {
-  const UsersData = [
-    { id: 1, name: 'John', username: 'johnrambo'},
+
+
+const App = () => {
+
+  const usersData = [
+    { id: 1, name: 'John', username: 'johnrambo' },
     { id: 2, name: 'Johny', username: 'joyjohn' },
     { id: 3, name: 'Johnathan', username: 'nathanjo' },
 
   ]
-}
 
-const [users, setUsers] = useState(usersData)
+  const [users] = useState(usersData)
 
-const App = () => {
+  // const addUser = user => {
+  //   user.id = users.length + 1
+  //   serUsers([...users, user])
+  // }
+
   return (
     <div className="container">
       <h1>App with hooks</h1>
